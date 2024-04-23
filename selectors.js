@@ -35,6 +35,8 @@ console.log(myInputs[1]);
 
 console.log(document.getElementsByTagName("h3")[0]);
 
+console.log(myInputs.item(1));
+
 const myLists = document.getElementsByTagName("li");
 const myListsArr = [...myLists];
 console.log(myListsArr);
@@ -43,3 +45,45 @@ myListsArr.forEach((li) => (li.style.color = "red"));
 const myListsArr1 = Array.from(myLists);
 console.log(myListsArr1);
 myListsArr1.map((li) => (li.style.listStyleType = "none"));
+
+const lists = document.getElementsByClassName("list");
+
+const listsArr = [...lists];
+listsArr.forEach((li) => console.log(li));
+
+// lists[2].innerHTML = "Javascript language";
+lists[2].innerHTML = `<h1>Javascript</h1>`;
+lists[3].innerText = `<h1>React</h1>`;
+lists[4].textContent = `<h1>VUE</h1>`;
+
+const header = document.querySelector("#header");
+console.log(header);
+
+const itemLists = document.querySelector(".list");
+console.log(itemLists);
+
+const h2 = document.querySelector("h2");
+console.log(h2);
+
+const otherH2 = document.querySelector("section h2");
+
+const buton = document.querySelector("section.add-item #btn");
+console.log(buton);
+
+const react = document.querySelector("section.item-list ul li:nth-child(4)");
+console.log(react);
+
+const listeler = document.querySelectorAll("ul li");
+console.log(listeler);
+
+listeler.forEach((li) => console.log(li));
+
+console.log(listeler.entries());
+
+for (const liste of listeler.values()) {
+  console.log(liste);
+}
+
+// for (const liste of listeler.keys()) {
+//   console.log(liste);
+// }
